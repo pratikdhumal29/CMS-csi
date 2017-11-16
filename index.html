@@ -1,0 +1,286 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Computer Society of India</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Josefin+Slab|Metamorphous|Ubuntu' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="javascript/jquery.canvasjs.min.js"></script>
+
+    <style>
+    
+    .carousel-inner > .item > img,
+    .carousel-inner > .item > a > img {
+        width: 100%;
+        margin: auto;
+    }
+    
+    .container {
+        width: 100%;
+    }
+    
+    .carousel {
+        background: black;
+    }
+    
+    .carousel .item {
+        height: 680px;
+    }
+    
+    .item img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-height: 680px;
+    }
+    
+    h3 {
+        font-family: 'Josefin Slab', sans-serif;
+        font-weight: bold;
+        font-size: 36px;
+        color: #99CCCC;
+    }
+    
+    .carousel-indicators li {
+        /*background-color: #99CCCC;
+            */
+        width: 10px;
+    }
+    
+    .carousel-arrows-left {
+        position: absolute;
+        top: 50%;
+        left: 10%;
+    }
+    
+    .carousel-arrows-right {
+        position: absolute;
+        top: 50%;
+        right: 10%;
+    }
+    
+    .content-div {
+        width: 300px;
+        height: 400px;
+        padding: 15px;
+        background-color: white;
+        border-color: black;
+        border-width: 2px;
+        border-style: solid;
+        font-family: Metamorphous;
+        font-size: 20px;
+    }
+    
+    .content-div:hover {
+        -moz-box-shadow: inset 0 0 20px #000000;
+        -webkit-box-shadow: inset 0 0 20px #000000;
+        box-shadow: inset 0 0 20px #000000;
+    }
+    
+    .content-div>img {
+        -webkit-filter: grayscale(100%);
+        /* Safari 6.0 - 9.0 */
+        filter: grayscale(100%);
+    }
+    
+    .content-div>img:hover {
+        -webkit-filter: grayscale(0%);
+        /* Safari 6.0 - 9.0 */
+        filter: grayscale(0%);
+    }
+    
+    hr.style1 {
+        height: 10px;
+        border: 0;
+        box-shadow: 0 10px 10px -10px #8c8b8b inset;
+    }
+    
+    hr.style2 {
+        border-style: solid;
+        border-width: 2px;
+    }
+    
+    </style>
+    <script type="text/javascript">
+    window.onload = function() {
+        var chart = new CanvasJS.Chart("chartContainer", {
+            data: [{
+                type: "column",
+                dataPoints: [{
+                        label: "Members",
+                        y: 100
+                    }, {
+                        label: "Events",
+                        y: 150
+                    }, {
+                        label: "Participation",
+                        y: 20
+                    }
+
+                ]
+            }]
+        });
+
+        chart.render();
+    }
+    </script>
+</head>
+
+<body>
+    <!-- Navigation Bar  Start -->
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <img src="images/csi/csilogo.jpg" width="40px" height="40px" style="margin-top:0;">
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Sponsors</a></li>
+                    <li><a href="#">Magazine</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navigation Bar  End -->
+    <!-- Carousel Start -->
+    <div class="container">
+        <br>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="8000" style="width: 75%; margin: 0 auto">
+            <!-- Indicators -->
+            <!-- <ol class="carousel-indicators">
+      				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      				<li data-target="#myCarousel" data-slide-to="1"></li>
+      				<li data-target="#myCarousel" data-slide-to="2"></li>
+      				<li data-target="#myCarousel" data-slide-to="3"></li>
+      				<li data-target="#myCarousel" data-slide-to="4"></li>
+    			</ol> -->
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img src="images/csi/csipic1.jpg" alt="Chania" width="460" height="345">
+                    <div class="carousel-caption">
+                        <h3>CSI</h3>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="images/csi/csipic2.jpg" alt="Chania" width="460" height="345">
+                    <div class="carousel-caption">
+                        <h3>Events</h3>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="images/csi/csipic3.jpg" alt="Flower" width="460" height="345">
+                    <div class="carousel-caption">
+                        <h3>Team</h3>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="images/csi/csipic4.jpg" alt="Flower" width="460" height="345">
+                    <div class="carousel-caption">
+                        <h3>Fun</h3>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="images/csi/csipic5.jpg" alt="Flower" width="460" height="345">
+                    <div class="carousel-caption">
+                        <h3>Seniors</h3>
+                    </div>
+                </div>
+            </div>
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                <img class="carousel-arrows-left" src="images/left.png">
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                <img class="carousel-arrows-right" src="images/right.png">
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+    <!-- Carousel End -->
+    <hr class="style1" />
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <!-- Middle Part Start-->
+    <center>
+        <div class="row around-sm">
+            <div class="col-sm-4">
+                <div class="content-div">
+                    <img src="images/techicon.png" width="75px" height="75px">
+                    <br/>
+                    <br/>
+                    <b>Technical Club</b>
+                    <br/>
+                    <br/>
+                    <hr class="style2" />
+                    <small style="color:#2B4566">CSI made its way into the ultimate tech clubs of ITNU and is built with the technical ascept at its core.</small>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="content-div">
+                    <img src="images/profficon.png" width="75px" height="75px">
+                    <br/>
+                    <br/>
+                    <b>Professional</b>
+                    <br/>
+                    <br/>
+                    <hr class="style2" />
+                    <small style="color:#569926">Looking towards the past, CSI boasts to be the home of several industry professionals and entrepreneurs.</small>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="content-div">
+                    <img src="images/dedicated.png" width="75px" height="75px">
+                    <br/>
+                    <br/>
+                    <b>Dedicated</b>
+                    <br/>
+                    <br/>
+                    <hr class="style2" />
+                    <small style="color:#992036">The rich tradition of achieving success is something to behold, which is owed to the members, pillars of CSI.</small>
+                </div>
+            </div>
+        </div>
+    </center>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <center>
+        <div id="chartContainer" style="height: 300px; width: 50%;"></div>
+    </center>
+    <br/>
+    <br/>
+    <!-- Middle Part End -->
+    <!-- Footer Start -->
+    <div class="footer">
+        <img src="images/developicon.png" width="35px" height="35px"> &nbsp;&nbsp;
+        <small>Developed By CSI- Nirma University Branch</small>
+    </div>
+    <!-- Footer End -->
+</body>
+
+</html>
